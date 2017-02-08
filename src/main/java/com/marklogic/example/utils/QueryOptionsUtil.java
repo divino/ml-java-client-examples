@@ -1,4 +1,4 @@
-package com.marklogic.example;
+package com.marklogic.example.utils;
 
 import com.marklogic.client.*;
 import com.marklogic.client.admin.QueryOptionsManager;

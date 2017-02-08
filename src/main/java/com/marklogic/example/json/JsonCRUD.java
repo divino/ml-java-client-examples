@@ -1,4 +1,4 @@
-package com.marklogic.example;
+package com.marklogic.example.json;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.*;
@@ -21,7 +21,7 @@ public class JsonCRUD {
     String docUri = "/marklogic/example/maria.json";
     String jsonFile = "data/json/persons.json";
 
-    void deleteDocument(DatabaseClient client) {
+    public void deleteDocument(DatabaseClient client) {
         // create a manager for JSON documents
         JSONDocumentManager docMgr = client.newJSONDocumentManager();
 
@@ -38,7 +38,7 @@ public class JsonCRUD {
 
     }
 
-    void createDoc(DatabaseClient client) {
+    public void createDoc(DatabaseClient client) {
         System.out.println("Create Document");
 
         // create a manager for JSON documents
@@ -69,11 +69,20 @@ public class JsonCRUD {
         tagsArray.add(new JsonPrimitive("mother"));
         tagsArray.add(new JsonPrimitive("person"));
 
+        JsonObject tripleObj = new JsonObject();
+        tripleObj.addProperty("subject", "http://example.org/#josie");
+        tripleObj.addProperty("predicate", "http://xmlns.com/foaf/0.1/firstname/");
+        JsonObject tripleObjValue = new JsonObject();
+        tripleObjValue.addProperty("datatype", "http://www.w3.org/2001/XMLSchema#string");
+        tripleObjValue.addProperty("value", "josie");
+        tripleObj.add("object", tripleObjValue);
+
         JsonObject writeRoot = new JsonObject();
         writeRoot.add("data", dataObj);
         writeRoot.add("metaData", metaDataObj);
         writeRoot.add("tags",  tagsArray);
         writeRoot.add("dependents", dependentsArray);
+        writeRoot.add("triple", tripleObj);
 
         // create a handle for the JSON structure
         GSONHandle writeHandle = new GSONHandle(writeRoot);
@@ -86,14 +95,14 @@ public class JsonCRUD {
 
     }
 
-    void verify (DatabaseClient client, boolean release) {
+    public void verify (DatabaseClient client, boolean release) {
         verify(client);
         if (release) {
             client.release();
         }
     }
 
-    void verify (DatabaseClient client) {
+    public void verify (DatabaseClient client) {
         JSONDocumentManager docMgr = client.newJSONDocumentManager();
         String data = docMgr.read(this.docUri, new StringHandle()).get();
 
@@ -105,7 +114,7 @@ public class JsonCRUD {
         System.out.println("DOC " + prettyJsonString);
     }
 
-    void loadDocs(DatabaseClient client) throws IOException {
+    public void loadDocs(DatabaseClient client) throws IOException {
         System.out.println("Load documents from json file " + this.jsonFile);
 
         DocumentMetadataHandle meta = new DocumentMetadataHandle();
@@ -141,7 +150,7 @@ public class JsonCRUD {
 
     }
 
-    void updateDocXpath(DatabaseClient client) {
+    public void updateDocXpath(DatabaseClient client) {
 
         // create a manager for JSON documents
         JSONDocumentManager docMgr = client.newJSONDocumentManager();
@@ -165,7 +174,7 @@ public class JsonCRUD {
         client.release();
     }
 
-    void replaceArrayNode(DatabaseClient client) {
+    public void replaceArrayNode(DatabaseClient client) {
 
         // create a manager for JSON documents
         JSONDocumentManager docMgr = client.newJSONDocumentManager();
@@ -187,7 +196,7 @@ public class JsonCRUD {
         client.release();
     }
 
-    void updateDocJsonpath(DatabaseClient client) {
+    public void updateDocJsonpath(DatabaseClient client) {
 
         // create a manager for JSON documents
         JSONDocumentManager docMgr = client.newJSONDocumentManager();
@@ -209,7 +218,7 @@ public class JsonCRUD {
         client.release();
     }
 
-    void deleteCollection(DatabaseClient client, String collection) {
+    public void deleteCollection(DatabaseClient client, String collection) {
         QueryManager qman = client.newQueryManager();
         DeleteQueryDefinition delDef = qman.newDeleteDefinition();
         delDef.setCollections(collection);

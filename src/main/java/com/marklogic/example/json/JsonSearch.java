@@ -1,4 +1,4 @@
-package com.marklogic.example;
+package com.marklogic.example.json;
 
 import com.google.gson.*;
 import com.marklogic.client.*;
@@ -7,10 +7,11 @@ import com.marklogic.client.io.StringHandle;
 import com.marklogic.client.query.QueryManager;
 import com.marklogic.client.query.RawQueryByExampleDefinition;
 import com.marklogic.client.query.StringQueryDefinition;
+import com.marklogic.example.utils.QueryOptionsUtil;
 
 public class JsonSearch {
 
-    void searchByExample(DatabaseClient client) {
+    public void searchByExample(DatabaseClient client) {
         QueryManager queryMgr = client.newQueryManager();
 
         // create a searchByExample definition

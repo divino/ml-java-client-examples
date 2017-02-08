@@ -1,4 +1,4 @@
-package com.marklogic.example;
+package com.marklogic.example.json;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

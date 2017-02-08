@@ -2,6 +2,10 @@ package com.marklogic.example;
 
 import com.marklogic.client.DatabaseClient;
 import com.marklogic.client.DatabaseClientFactory;
+import com.marklogic.example.graph.GraphSPARQLExample;
+import com.marklogic.example.json.JsonCRUD;
+import com.marklogic.example.json.JsonSearch;
+import com.marklogic.example.utils.QueryOptionsUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -32,7 +36,7 @@ public class MarkLogicExamplesMain {
 			jsonCrud.verify(main.getDBClient());
 			jsonCrud.updateDocJsonpath(main.getDBClient());
 			jsonCrud.verify(main.getDBClient());
-			jsonCrud.deleteDocument(main.getDBClient());
+			//jsonCrud.deleteDocument(main.getDBClient());
 
 			JsonSearch jsonSearch = new JsonSearch();
 			jsonCrud.loadDocs(main.getDBClient());
@@ -44,7 +48,13 @@ public class MarkLogicExamplesMain {
 			jsonSearch.structuredQuery(main.getDBClient(), "sort:\"dob-asc\"", 10);
 
 			//enable this to cleanup
-			jsonCrud.deleteCollection(main.getDBClient(), "structuredQuery-samples-marklogic");
+			//jsonCrud.deleteCollection(main.getDBClient(), "structuredQuery-samples-marklogic");
+
+			GraphSPARQLExample gse = new GraphSPARQLExample();
+			gse.insertGraph(main.getDBClient());
+			gse.runQuery(main.getDBClient());
+			// cleanup
+			gse.deleteGraph(main.getDBClient());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
