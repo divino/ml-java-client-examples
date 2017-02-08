@@ -69,20 +69,30 @@ public class JsonCRUD {
         tagsArray.add(new JsonPrimitive("mother"));
         tagsArray.add(new JsonPrimitive("person"));
 
-        JsonObject tripleObj = new JsonObject();
-        tripleObj.addProperty("subject", "http://example.org/#josie");
-        tripleObj.addProperty("predicate", "http://xmlns.com/foaf/0.1/firstname/");
-        JsonObject tripleObjValue = new JsonObject();
-        tripleObjValue.addProperty("datatype", "http://www.w3.org/2001/XMLSchema#string");
-        tripleObjValue.addProperty("value", "josie");
-        tripleObj.add("object", tripleObjValue);
+        JsonArray triplesArray = new JsonArray();
+        JsonObject tripleObj1 = new JsonObject();
+        tripleObj1.addProperty("subject", "http://example.org/#josie");
+        tripleObj1.addProperty("predicate", "http://xmlns.com/foaf/0.1/firstname/");
+        JsonObject tripleObj1Value = new JsonObject();
+        tripleObj1Value.addProperty("datatype", "http://www.w3.org/2001/XMLSchema#string");
+        tripleObj1Value.addProperty("value", "josie");
+        tripleObj1.add("object", tripleObj1Value);
+        JsonObject tripleObj2 = new JsonObject();
+        tripleObj2.addProperty("subject", "http://example.org/#josie");
+        tripleObj2.addProperty("predicate", "http://example.org/parentUri/");
+        JsonObject tripleObj2Value = new JsonObject();
+        tripleObj2Value.addProperty("datatype", "http://www.w3.org/2001/XMLSchema#string");
+        tripleObj2Value.addProperty("value", this.docUri);
+        tripleObj2.add("object", tripleObj2Value);
+        triplesArray.add(tripleObj1);
+        triplesArray.add(tripleObj2);
 
         JsonObject writeRoot = new JsonObject();
         writeRoot.add("data", dataObj);
         writeRoot.add("metaData", metaDataObj);
         writeRoot.add("tags",  tagsArray);
         writeRoot.add("dependents", dependentsArray);
-        writeRoot.add("triple", tripleObj);
+        writeRoot.add("triple", triplesArray);
 
         // create a handle for the JSON structure
         GSONHandle writeHandle = new GSONHandle(writeRoot);

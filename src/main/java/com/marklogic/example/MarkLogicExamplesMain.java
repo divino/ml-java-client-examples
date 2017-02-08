@@ -48,13 +48,19 @@ public class MarkLogicExamplesMain {
 			jsonSearch.structuredQuery(main.getDBClient(), "sort:\"dob-asc\"", 10);
 
 			//enable this to cleanup
-			//jsonCrud.deleteCollection(main.getDBClient(), "structuredQuery-samples-marklogic");
+			jsonCrud.deleteCollection(main.getDBClient(), "structuredQuery-samples-marklogic");
 
 			GraphSPARQLExample gse = new GraphSPARQLExample();
-			gse.insertGraph(main.getDBClient());
-			gse.runQuery(main.getDBClient());
+			gse.loadTriplesFromFile(main.getDBClient());
+			gse.runQuery1(main.getDBClient());
+			gse.insertTriples(main.getDBClient());
+			gse.runQuery2(main.getDBClient());
+			gse.updateTriples(main.getDBClient());
+			gse.runQuery2(main.getDBClient());
 			// cleanup
-			gse.deleteGraph(main.getDBClient());
+			gse.deleteTriples(main.getDBClient());
+			gse.deleteGraph(main.getDBClient(), GraphSPARQLExample.GRAPH_URI);
+			gse.deleteGraph(main.getDBClient(), GraphSPARQLExample.GRAPH_URI_FOR_CRUD);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
