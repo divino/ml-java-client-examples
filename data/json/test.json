@@ -1,0 +1,471 @@
+{
+  "snippet-format": "snippet",
+  "total": 100,
+  "start": 1,
+  "page-length": 10,
+  "selected": "all",
+  "results": [
+    {
+      "index": 1,
+      "uri": "/marklogic/examples/5537538422690102955.json",
+      "path": "fn:doc(\"/marklogic/examples/5537538422690102955.json\")",
+      "score": 0,
+      "confidence": 0,
+      "fitness": 0,
+      "href": "/v1/documents?uri\u003d%2Fmarklogic%2Fexamples%2F5537538422690102955.json",
+      "mimetype": "application/json",
+      "format": "json",
+      "matches": [
+        {
+          "path": "fn:doc(\"/marklogic/examples/5537538422690102955.json\")/object-node()",
+          "match-text": [
+            "Abel Wallace Stout quis.diam.luctus@quisaccumsan.co.uk 1998-08-05 Saint Pierre and Miquelon Auctor Corporation"
+          ]
+        }
+      ],
+      "extracted": {
+        "kind": "object",
+        "content": [
+          {
+            "firstName": "Abel",
+            "lastName": "Wallace",
+            "middleName": "Stout",
+            "email": "quis.diam.luctus@quisaccumsan.co.uk",
+            "dob": "1998-08-05",
+            "country": "Saint Pierre and Miquelon",
+            "company": "Auctor Corporation",
+            "id": 979
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "uri": "/marklogic/examples/10884250283502427643.json",
+      "path": "fn:doc(\"/marklogic/examples/10884250283502427643.json\")",
+      "score": 0,
+      "confidence": 0,
+      "fitness": 0,
+      "href": "/v1/documents?uri\u003d%2Fmarklogic%2Fexamples%2F10884250283502427643.json",
+      "mimetype": "application/json",
+      "format": "json",
+      "matches": [
+        {
+          "path": "fn:doc(\"/marklogic/examples/10884250283502427643.json\")/object-node()",
+          "match-text": [
+            "Alana Webster Howell magna.Suspendisse@euismodacfermentum.edu 1954-02-10 Jordan Fusce LLC"
+          ]
+        }
+      ],
+      "extracted": {
+        "kind": "object",
+        "content": [
+          {
+            "firstName": "Alana",
+            "lastName": "Webster",
+            "middleName": "Howell",
+            "email": "magna.Suspendisse@euismodacfermentum.edu",
+            "dob": "1954-02-10",
+            "country": "Jordan",
+            "company": "Fusce LLC",
+            "id": 922
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "uri": "/marklogic/examples/4785923085527145988.json",
+      "path": "fn:doc(\"/marklogic/examples/4785923085527145988.json\")",
+      "score": 0,
+      "confidence": 0,
+      "fitness": 0,
+      "href": "/v1/documents?uri\u003d%2Fmarklogic%2Fexamples%2F4785923085527145988.json",
+      "mimetype": "application/json",
+      "format": "json",
+      "matches": [
+        {
+          "path": "fn:doc(\"/marklogic/examples/4785923085527145988.json\")/object-node()",
+          "match-text": [
+            "Alec English Gillespie rhoncus@egestasnuncsed.edu 1924-04-28 Brazil Eu Erat Institute"
+          ]
+        }
+      ],
+      "extracted": {
+        "kind": "object",
+        "content": [
+          {
+            "firstName": "Alec",
+            "lastName": "English",
+            "middleName": "Gillespie",
+            "email": "rhoncus@egestasnuncsed.edu",
+            "dob": "1924-04-28",
+            "country": "Brazil",
+            "company": "Eu Erat Institute",
+            "id": 972
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "uri": "/marklogic/examples/16134271693755863364.json",
+      "path": "fn:doc(\"/marklogic/examples/16134271693755863364.json\")",
+      "score": 0,
+      "confidence": 0,
+      "fitness": 0,
+      "href": "/v1/documents?uri\u003d%2Fmarklogic%2Fexamples%2F16134271693755863364.json",
+      "mimetype": "application/json",
+      "format": "json",
+      "matches": [
+        {
+          "path": "fn:doc(\"/marklogic/examples/16134271693755863364.json\")/object-node()",
+          "match-text": [
+            "Alexandra Duke Dotson sagittis.augue.eu@anequeNullam.edu 1931-07-07 Djibouti Ac Consulting"
+          ]
+        }
+      ],
+      "extracted": {
+        "kind": "object",
+        "content": [
+          {
+            "firstName": "Alexandra",
+            "lastName": "Duke",
+            "middleName": "Dotson",
+            "email": "sagittis.augue.eu@anequeNullam.edu",
+            "dob": "1931-07-07",
+            "country": "Djibouti",
+            "company": "Ac Consulting",
+            "id": 964
+          }
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "uri": "/marklogic/examples/10736192802151560006.json",
+      "path": "fn:doc(\"/marklogic/examples/10736192802151560006.json\")",
+      "score": 0,
+      "confidence": 0,
+      "fitness": 0,
+      "href": "/v1/documents?uri\u003d%2Fmarklogic%2Fexamples%2F10736192802151560006.json",
+      "mimetype": "application/json",
+      "format": "json",
+      "matches": [
+        {
+          "path": "fn:doc(\"/marklogic/examples/10736192802151560006.json\")/object-node()",
+          "match-text": [
+            "Amaya Velasquez Baird tortor.dictum.eu@malesuadafamesac.net 1965-08-29 El Salvador Amet Company"
+          ]
+        }
+      ],
+      "extracted": {
+        "kind": "object",
+        "content": [
+          {
+            "firstName": "Amaya",
+            "lastName": "Velasquez",
+            "middleName": "Baird",
+            "email": "tortor.dictum.eu@malesuadafamesac.net",
+            "dob": "1965-08-29",
+            "country": "El Salvador",
+            "company": "Amet Company",
+            "id": 920
+          }
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "uri": "/marklogic/examples/18372354983558531144.json",
+      "path": "fn:doc(\"/marklogic/examples/18372354983558531144.json\")",
+      "score": 0,
+      "confidence": 0,
+      "fitness": 0,
+      "href": "/v1/documents?uri\u003d%2Fmarklogic%2Fexamples%2F18372354983558531144.json",
+      "mimetype": "application/json",
+      "format": "json",
+      "matches": [
+        {
+          "path": "fn:doc(\"/marklogic/examples/18372354983558531144.json\")/object-node()",
+          "match-text": [
+            "Amena Nunez Merrill tincidunt@lectusjustoeu.com 1926-05-18 Honduras Mauris Vel Incorporated"
+          ]
+        }
+      ],
+      "extracted": {
+        "kind": "object",
+        "content": [
+          {
+            "firstName": "Amena",
+            "lastName": "Nunez",
+            "middleName": "Merrill",
+            "email": "tincidunt@lectusjustoeu.com",
+            "dob": "1926-05-18",
+            "country": "Honduras",
+            "company": "Mauris Vel Incorporated",
+            "id": 942
+          }
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "uri": "/marklogic/examples/12125356741387807141.json",
+      "path": "fn:doc(\"/marklogic/examples/12125356741387807141.json\")",
+      "score": 0,
+      "confidence": 0,
+      "fitness": 0,
+      "href": "/v1/documents?uri\u003d%2Fmarklogic%2Fexamples%2F12125356741387807141.json",
+      "mimetype": "application/json",
+      "format": "json",
+      "matches": [
+        {
+          "path": "fn:doc(\"/marklogic/examples/12125356741387807141.json\")/object-node()",
+          "match-text": [
+            "Amena Christensen Delaney dui@Vivamus.com 1929-07-02 Canada Ullamcorper Associates"
+          ]
+        }
+      ],
+      "extracted": {
+        "kind": "object",
+        "content": [
+          {
+            "firstName": "Amena",
+            "lastName": "Christensen",
+            "middleName": "Delaney",
+            "email": "dui@Vivamus.com",
+            "dob": "1929-07-02",
+            "country": "Canada",
+            "company": "Ullamcorper Associates",
+            "id": 973
+          }
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "uri": "/marklogic/examples/17733020764508566505.json",
+      "path": "fn:doc(\"/marklogic/examples/17733020764508566505.json\")",
+      "score": 0,
+      "confidence": 0,
+      "fitness": 0,
+      "href": "/v1/documents?uri\u003d%2Fmarklogic%2Fexamples%2F17733020764508566505.json",
+      "mimetype": "application/json",
+      "format": "json",
+      "matches": [
+        {
+          "path": "fn:doc(\"/marklogic/examples/17733020764508566505.json\")/object-node()",
+          "match-text": [
+            "Anika Wagner Cole gravida@velitinaliquet.edu 1995-11-13 Mexico Pede Company"
+          ]
+        }
+      ],
+      "extracted": {
+        "kind": "object",
+        "content": [
+          {
+            "firstName": "Anika",
+            "lastName": "Wagner",
+            "middleName": "Cole",
+            "email": "gravida@velitinaliquet.edu",
+            "dob": "1995-11-13",
+            "country": "Mexico",
+            "company": "Pede Company",
+            "id": 992
+          }
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "uri": "/marklogic/examples/1551976200014127808.json",
+      "path": "fn:doc(\"/marklogic/examples/1551976200014127808.json\")",
+      "score": 0,
+      "confidence": 0,
+      "fitness": 0,
+      "href": "/v1/documents?uri\u003d%2Fmarklogic%2Fexamples%2F1551976200014127808.json",
+      "mimetype": "application/json",
+      "format": "json",
+      "matches": [
+        {
+          "path": "fn:doc(\"/marklogic/examples/1551976200014127808.json\")/object-node()",
+          "match-text": [
+            "Armand Nash Watson blandit.Nam.nulla@Aliquamvulputateullamcorper.co.uk 1990-01-17 Qatar Pretium Consulting"
+          ]
+        }
+      ],
+      "extracted": {
+        "kind": "object",
+        "content": [
+          {
+            "firstName": "Armand",
+            "lastName": "Nash",
+            "middleName": "Watson",
+            "email": "blandit.Nam.nulla@Aliquamvulputateullamcorper.co.uk",
+            "dob": "1990-01-17",
+            "country": "Qatar",
+            "company": "Pretium Consulting",
+            "id": 951
+          }
+        ]
+      }
+    },
+    {
+      "index": 10,
+      "uri": "/marklogic/examples/12120231478382595212.json",
+      "path": "fn:doc(\"/marklogic/examples/12120231478382595212.json\")",
+      "score": 0,
+      "confidence": 0,
+      "fitness": 0,
+      "href": "/v1/documents?uri\u003d%2Fmarklogic%2Fexamples%2F12120231478382595212.json",
+      "mimetype": "application/json",
+      "format": "json",
+      "matches": [
+        {
+          "path": "fn:doc(\"/marklogic/examples/12120231478382595212.json\")/object-node()",
+          "match-text": [
+            "Armando Pittman Henson lorem@auctorullamcorper.co.uk 1954-10-07 Lesotho Massa Suspendisse Eleifend Incorporated"
+          ]
+        }
+      ],
+      "extracted": {
+        "kind": "object",
+        "content": [
+          {
+            "firstName": "Armando",
+            "lastName": "Pittman",
+            "middleName": "Henson",
+            "email": "lorem@auctorullamcorper.co.uk",
+            "dob": "1954-10-07",
+            "country": "Lesotho",
+            "company": "Massa Suspendisse Eleifend Incorporated",
+            "id": 905
+          }
+        ]
+      }
+    }
+  ],
+  "facets": {
+    "Collection": {
+      "type": "collection",
+      "facetValues": [
+        {
+          "name": "structuredQuery-samples-marklogic",
+          "count": 100,
+          "value": "structuredQuery-samples-marklogic"
+        }
+      ]
+    },
+    "country": {
+      "type": "xs:string",
+      "facetValues": [
+        {
+          "name": "Palestine, State of",
+          "count": 3,
+          "value": "Palestine, State of"
+        },
+        {
+          "name": "Austria",
+          "count": 2,
+          "value": "Austria"
+        },
+        {
+          "name": "Comoros",
+          "count": 2,
+          "value": "Comoros"
+        },
+        {
+          "name": "Croatia",
+          "count": 2,
+          "value": "Croatia"
+        },
+        {
+          "name": "Djibouti",
+          "count": 2,
+          "value": "Djibouti"
+        }
+      ]
+    },
+    "firstName": {
+      "type": "xs:string",
+      "facetValues": [
+        {
+          "name": "Zenaida",
+          "count": 1,
+          "value": "Zenaida"
+        },
+        {
+          "name": "Zachery",
+          "count": 1,
+          "value": "Zachery"
+        },
+        {
+          "name": "Yoko",
+          "count": 1,
+          "value": "Yoko"
+        },
+        {
+          "name": "Xyla",
+          "count": 1,
+          "value": "Xyla"
+        },
+        {
+          "name": "Xantha",
+          "count": 1,
+          "value": "Xantha"
+        }
+      ]
+    },
+    "lastName": {
+      "type": "xs:string",
+      "facetValues": [
+        {
+          "name": "Wilkinson",
+          "count": 1,
+          "value": "Wilkinson"
+        },
+        {
+          "name": "Whitfield",
+          "count": 1,
+          "value": "Whitfield"
+        },
+        {
+          "name": "Whitehead",
+          "count": 1,
+          "value": "Whitehead"
+        },
+        {
+          "name": "Webster",
+          "count": 1,
+          "value": "Webster"
+        },
+        {
+          "name": "Ward",
+          "count": 1,
+          "value": "Ward"
+        }
+      ]
+    }
+  },
+  "query": {
+    "and-query": [
+      {
+        "annotation": [
+          {
+            "operator-ref": "sort",
+            "state-ref": "firstName-asc"
+          }
+        ]
+      }
+    ]
+  },
+  "qtext": "sort:\"firstName-asc\"",
+  "metrics": {
+    "query-resolution-time": "PT0.006398S",
+    "facet-resolution-time": "PT0.004314S",
+    "snippet-resolution-time": "PT0.001869S",
+    "extract-resolution-time": "PT0.001079S",
+    "total-time": "PT0.017112S"
+  }
+}

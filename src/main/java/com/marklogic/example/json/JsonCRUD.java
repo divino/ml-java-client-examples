@@ -5,12 +5,6 @@ import com.google.gson.*;
 import com.marklogic.client.DatabaseClient;
 import com.marklogic.client.ResourceNotFoundException;
 import com.marklogic.client.document.*;
-import com.marklogic.client.extra.gson.GSONHandle;
-import com.marklogic.client.impl.DocumentUriTemplateImpl;
-import com.marklogic.client.io.DocumentMetadataHandle;
-import com.marklogic.client.io.StringHandle;
-import com.marklogic.client.query.DeleteQueryDefinition;
-import com.marklogic.client.query.QueryManager;
 import org.apache.http.client.utils.DateUtils;
 
 import java.io.*;
@@ -22,20 +16,14 @@ public class JsonCRUD {
     String jsonFile = "data/json/persons.json";
 
     public void deleteDocument(DatabaseClient client) {
-        // create a manager for JSON documents
-        JSONDocumentManager docMgr = client.newJSONDocumentManager();
-
-        // delete the document
         try {
-            docMgr.delete(docUri);
+            JsonCrudUtil.deleteDocument(client, this.docUri);
             verify(client);
         } catch (ResourceNotFoundException e) {
-            System.out.println("File " + this.docUri + " is confirmed deleted.");
-            //e.printStackTrace();
+            System.out.println("deleted " + this.docUri);
         } finally {
             client.release();
         }
-
     }
 
     public void createDoc(DatabaseClient client) {
@@ -94,15 +82,10 @@ public class JsonCRUD {
         writeRoot.add("dependents", dependentsArray);
         writeRoot.add("triple", triplesArray);
 
-        // create a handle for the JSON structure
-        GSONHandle writeHandle = new GSONHandle(writeRoot);
-
-        // write the document to the database
-        docMgr.write(docUri, writeHandle);
+        JsonCrudUtil.insertDoc(client, this.docUri, writeRoot);
 
         // release the client
         client.release();
-
     }
 
     public void verify (DatabaseClient client, boolean release) {
@@ -113,51 +96,13 @@ public class JsonCRUD {
     }
 
     public void verify (DatabaseClient client) {
-        JSONDocumentManager docMgr = client.newJSONDocumentManager();
-        String data = docMgr.read(this.docUri, new StringHandle()).get();
-
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        JsonParser jp = new JsonParser();
-        JsonElement je = jp.parse(data);
-        String prettyJsonString = gson.toJson(je);
-
-        System.out.println("DOC " + prettyJsonString);
+        System.out.println("DOC " + JsonCrudUtil.getJsonDocString(client, this.docUri));
     }
 
     public void loadDocs(DatabaseClient client) throws IOException {
-        System.out.println("Load documents from json file " + this.jsonFile);
-
-        DocumentMetadataHandle meta = new DocumentMetadataHandle();
-        meta.getCollections().add("structuredQuery-samples-marklogic");
-
-        try (InputStream docStream = new FileInputStream(this.jsonFile)) {
-            if (docStream == null) {
-                throw new IOException("Could not read document example");
-            }
-
-            // parse the example file with GSON
-            JsonElement writeDocument = new JsonParser().parse(
-                    new InputStreamReader(docStream, "UTF-8"));
-
-            JsonArray jsonArray = writeDocument.getAsJsonArray();
-
-            JSONDocumentManager docMgr = client.newJSONDocumentManager();
-
-            jsonArray.forEach(element -> {
-                // write the document to the database
-                DocumentUriTemplate uriTemplate = new DocumentUriTemplateImpl("json");
-                uriTemplate.setDirectory("/marklogic/examples/");
-                // create a handle for the JSON structure
-                GSONHandle writeHandle = new GSONHandle(element);
-                DocumentDescriptor id = docMgr.createAs(uriTemplate, meta, writeHandle);
-                System.out.println("uri " + id.getUri());
-              }
-            );
-        }
-
+        JsonCrudUtil.loadDocs(client, this.jsonFile, "structuredQuery-samples-marklogic");
         // release the client
         client.release();
-
     }
 
     public void updateDocXpath(DatabaseClient client) {
@@ -228,11 +173,9 @@ public class JsonCRUD {
         client.release();
     }
 
-    public void deleteCollection(DatabaseClient client, String collection) {
-        QueryManager qman = client.newQueryManager();
-        DeleteQueryDefinition delDef = qman.newDeleteDefinition();
-        delDef.setCollections(collection);
-        qman.delete(delDef);
+    public void removeArrayNodeJsonpath(DatabaseClient client) {
+        JsonCrudUtil.removeNodeJsonpath(client, docUri, "$.dependents[?(@.name='josef')]");
+        client.release();
     }
 
 }

@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "uri": "http://www.marklogic.com/articles/#100045",
+    "sourceUrl": "http://www.rappler.com/sports/by-sport/boxing-mma/160878-francisco-faces-handig-makati",
+    "title": "Boxing: Drian Francisco to end year-long layoff vs Mateo Handig",
+    "sourceOrganization": "Rappler.com",
+    "documentType": "Article",
+    "authors": [
+      {
+        "name": "ryan songalia",
+        "uri": "http://www.rappler.com/authorprofile/ryan-songalia"
+      }
+    ],
+    "datePublished": "2016-02-14",
+    "lastUpdate": "2016-08-22",
+    "classifications": [
+      "boxing",
+      "event"
+    ],
+    "tags": [
+      {
+        "taggedBy": "Joe de Mango",
+        "keywords": ["drian", "francisco", "boxing", "sports"],
+        "taggedOn": "2013-11-09"
+      }
+    ],
+    "references": [
+      "http://www.rappler.com/sports/by-sport/boxing-mma/113640-rigondeaux-outpoints-francisco-snoozer",
+      "http://www.rappler.com/sports/by-sport/boxing-mma/137449-mark-anthony-barriga-pro-title",
+      "http://www.rappler.com/sports/by-sport/boxing-mma/159154-randy-petalcorin-returns-florida"
+    ]
+  },
+  "content": "MANILA, Philippines – Former top contender Drian Francisco will return to the ring for the first time in over a year when he faces Mateo Handig on Saturday, February 18, at the Makati Cinema Square in Makati City, Philippines. The fight is scheduled for 10 rounds at a catchweight of 124 pounds.\n\nFrancisco, a former WBA interim bantamweight titleholder, hasn't fought since his decision loss to junior featherweight boss Guillermo Rigondeaux in November 2015.\n\nIt was a frustrating night in Las Vegas for Francisco as well as fans, as Rigondeaux relied on his movement to disengage from Francisco on the Saul \"Canelo\" Alvarez vs Miguel Cotto middleweight championship card.\n\nJoven Jimenez, Francisco's manager/trainer and the show's promoter, said the reason he had been inactive was an inability to secure fights. Jimenez added that a win for Francisco will likely lead to a regional title fight in his next outing, which would get him ranked back in the top 15 afterwards.\n\n\"I'm still Drian Francisco,\" said the 34-year-old from San Jose, Occidental Mindoro. \"I'm excited to fight in the ring and I'll do my best to come back again.\"\n\nHandig (13-12, 7 KOs), the \"Waray Warrior\" from Catarman, Northern Samar, has lost his last 7 fights dating back to 2013, a losing streak that followed his upset victory over Katsunari Takayama, a 4-time world strawweight champion from Japan in a title eliminator.\n\nThe card will also feature undefeated prospects Mark Anthony Barriga and Joepher Montano in separate bouts.\n\nBarriga (3-0), the Philippines' lone boxer at the 2012 Olympics, will face Jeven Villacite (4-5-4, 1 KO) in his first 10-round assignment. Barriga, 23, of Panabo City, Davao del Norte, turned pro last July in a 6-round fight instead of a 4-rounder like most debutants, and then fought in a pair of 8-rounders before stepping up to the 10-round level.\n\nMontano (7-0-2, 6 KOs) of Davao City will face Junar Adante (6-6-1, 3 KOs) in a 141-pound contest scheduled for 8 rounds.\n\nThe show begins at 4 pm and entrance is free. The fights will be broadcast as part of Rappler's Fight Night at a later date.\n\nPetalcorin-Florida moved across town\n\n\"Brawl at the Mall\" 6 will now become \"Laban Pinoy\" 3 as Sanman Promotions has moved the card headlined by Randy Petalcorin vs Mark Anthony Florida from the SM Convention Center in General Santos City to the Lagao Gym in the same town. The reason for the move is a matter of space, Sanman boss Jim Claude Manangquil told Rappler.\n\n\"SM Convention can only fit around 800 people. It's not enough,\" said Manangquil.\n\n\"With [Jade] Bornea, [Eden] Sonsona, and Petalcorin in the card, the 3 have their own fan base here in General Santos City. We moved it to the Lagao Gymnasium, [which] can fit around [3,000] to 4,000 people.\"\n\nThe card's date has also been moved back a day to Sunday, February 26, but remains free of charge.\n\nPayao vs Tinampay for PH bantam title in Cebu\n\nOmega Pro Sports International will host a 7-fight card on February 18 when Jhaleel Payao (14-1, 8 KOs) and Jason Tinampay (8-3-1, 7 KOs) battle for the vacant Philippine Boxing Federation bantamweight title at Talamban Sports Complex in Barangay Talamban, Cebu City.\n\nPayao, 23, of Cebu City showed his class in 2014 with a win over upset specialist Rene Dacquel before dropping a decision to compatriot Michael Dasmarinas.\n\nTinampay, 21, of Dagohoy, Bohol has lost in the two times he tried to step up in competition, being knocked out by prospects Rimar Metuda and Jack Tepora. – Rappler.com",
+  "triple": [
+    {
+      "subject": "http://xxx.com/BoxingEvent",
+      "predicate": "http://xxx.com/name",
+      "object": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#string",
+        "value": "Drian Francisco vs Mateo Handig"
+      }
+    },
+    {
+      "subject": "http://xxx.com/BoxingEvent",
+      "predicate": "http://xxx.com/uri",
+      "object": "http://xxx.com/Drian_Francisco_vs_Mateo_Handig"
+    },
+    {
+      "subject": "http://xxx.com/Drian_Francisco_vs_Mateo_Handig",
+      "predicate": "http://xxx.com/date",
+      "object": {
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2017-02-18"
+      }
+    },
+    {
+      "subject": "http://xxx.com/BoxingEvent",
+      "predicate": "http://xxx.com/boxingParticipant",
+      "object": "http://xxx.com/Drian_Francisco"
+    },
+    {
+      "subject": "http://xxx.com/BoxingEvent",
+      "predicate": "http://xxx.com/boxingParticipant",
+      "object": "http://xxx.com/Mateo_Handig"
+    }
+  ]
+}

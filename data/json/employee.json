@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "createdOn": "",
+    "createdBy": "",
+    "lastUpdatedBy": "",
+    "lastUpdatedOn": ""
+  },
+  "personalInfo" : {
+    "firstName": "lorenzo",
+    "lastName": "ruiz",
+    "dateOfBirth": "1901-01-21"
+  },
+  "companyProfile": {
+    "dateHired": "1955-10-01",
+    "rank": "Director",
+    "position": "Department Head",
+    "status": "ACTIVE",
+    "id": "12121-0292",
+    "department": "Change Management",
+    "positionHistory": [
+    ]
+  },
+  "dependents": [
+    {
+      "firstName": "enzo lorenz",
+      "lastName": "ruiz",
+      "gender": "male",
+      "dateOfBirth": "1922-11-11",
+      "relationToEmployee": "son"
+    },
+    {
+      "firstName": "enya monique",
+      "lastName": "ruiz",
+      "gender": "female",
+      "dateOfBirth": "1921-09-12",
+      "relationToEmployee": "daughter"
+    },
+    {
+      "firstName": "juana",
+      "lastName": "ruiz",
+      "gender": "female",
+      "dateOfBirth": "1905-11-09",
+      "relationToEmployee": "wife"
+    }
+  ],
+  "academicBackGround": [
+    {
+      "nameOfInstitution": "",
+      "yearEnrolled": "",
+      "yearGraduated": "",
+      "level": ""
+    }
+  ],
+  "employmentHistory": [
+    {
+      "company": "XYZ Corp",
+      "address": "One Raffles Quay",
+      "dateJoined": "1944-11-11",
+      "dateLeft": "1954-11-11",
+      "position": "Portfolio Manager",
+      "rank": "Vice President"
+    },
+    {
+      "company": "GM Bank",
+      "address": "One Raffles Quay",
+      "dateJoined": "1934-11-11",
+      "dateLeft": "1944-11-11",
+      "position": "Solution Architect",
+      "rank": "AVP"
+    },
+    {
+      "company": "OM Bank Corp",
+      "address": "One Raffles Quay",
+      "dateJoined": "1930-11-11",
+      "dateLeft": "1934-11-11",
+      "position": "Clerk",
+      "rank": "Associate"
+    }
+  ]
+}

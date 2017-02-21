@@ -1,0 +1,13 @@
+{
+  "userUri": "http://xxxx.com/users/rbsantiago.json",
+  "searches": [
+    {
+      "search": "boxing events",
+      "searchedOn": "2017-01-10T01:01:01",
+      "documentClicked": [
+        "http://xxxx.xxx.com/articles/20021111/xxx_vs_xyz.html",
+        "http://boxing.com/123233/events.html"
+      ]
+    }
+  ]
+}

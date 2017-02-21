@@ -42,6 +42,16 @@
 			<version>3.0.6</version>
 		</dependency>
 
+
+		<!-- https://mvnrepository.com/artifact/com.marklogic/marklogic-sesame -->
+		<dependency>
+			<groupId>com.marklogic</groupId>
+			<artifactId>marklogic-sesame</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+
+
+
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>

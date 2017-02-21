@@ -6,21 +6,28 @@ import com.marklogic.client.io.StringHandle;
 import org.apache.commons.io.IOUtils;
 
 import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by dbagayau on 07/02/2017.
  */
 public class QueryOptionsUtil {
 
-    public static String OPTIONS_NAME = "all";
+    public static String OPTIONS_NAME_ALL = "all";
+    public static String OPTIONS_NAME_TAGS = "tags";
 
-    private static String optionFilename = "src/main/resources/all.xml";
+    private static Map<String, String> optionRegistry = new HashMap<>();
 
-    public static void configure(DatabaseClient client) throws IOException {
+    static {
+        optionRegistry.put(OPTIONS_NAME_ALL, "src/main/resources/all.xml");
+        optionRegistry.put(OPTIONS_NAME_TAGS, "src/main/resources/tags.xml");
+    }
 
+    public static void configureOptions(DatabaseClient client, String optionName) throws IOException {
         // create a manager for writing query options
         QueryOptionsManager optionsMgr = client.newServerConfigManager().newQueryOptionsManager();
-        try (InputStream docStream = new FileInputStream(optionFilename)) {
+        try (InputStream docStream = new FileInputStream(optionRegistry.get(optionName))) {
 
             if (docStream == null) {
                 throw new IOException("Could not read document example");
@@ -32,7 +39,7 @@ public class QueryOptionsUtil {
             StringHandle writeHandle = new StringHandle(writer.toString());
 
             // write the query options to the database
-            optionsMgr.writeOptions(OPTIONS_NAME, writeHandle);
+            optionsMgr.writeOptions(optionName, writeHandle);
         }
 
         // release the client

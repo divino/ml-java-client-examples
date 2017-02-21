@@ -9,6 +9,11 @@ import com.google.gson.JsonParser;
  * Created by dbagayau on 08/02/2017.
  */
 public class JsonUtil {
+
+    public static JsonElement stringToElementObject(String string) {
+        return new JsonParser().parse(string);
+    }
+
     public static String prettify(String string) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         JsonParser jp = new JsonParser();
