@@ -100,7 +100,7 @@ public class JsonCRUD {
     }
 
     public void loadDocs(DatabaseClient client) throws IOException {
-        JsonCrudUtil.loadDocs(client, this.jsonFile, "structuredQuery-samples-marklogic");
+        JsonCrudUtil.loadDocs(client, this.jsonFile, "stringQuery-samples-marklogic");
         // release the client
         client.release();
     }

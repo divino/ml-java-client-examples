@@ -11,7 +11,7 @@
   </additional-query>
   -->
 
-  <!-- Full-text structuredQuery options -->
+  <!-- Full-text stringQuery options -->
   <term apply="term">
     <empty apply="all-results"/>
     <term-option>punctuation-insensitive</term-option>
@@ -152,7 +152,7 @@
   </suggestion-source>
   -->
 
-  <!-- This will extract the latitude and longitude from the structuredQuery. -->
+  <!-- This will extract the latitude and longitude from the stringQuery. -->
   <extract-document-data selected="all">
   </extract-document-data>
 

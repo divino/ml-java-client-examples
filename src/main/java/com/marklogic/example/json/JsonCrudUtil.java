@@ -1,9 +1,7 @@
 package com.marklogic.example.json;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.*;
 import com.marklogic.client.DatabaseClient;
-import com.marklogic.client.ResourceNotFoundException;
 import com.marklogic.client.document.DocumentDescriptor;
 import com.marklogic.client.document.DocumentPatchBuilder;
 import com.marklogic.client.document.DocumentUriTemplate;
@@ -14,13 +12,10 @@ import com.marklogic.client.io.DocumentMetadataHandle;
 import com.marklogic.client.io.StringHandle;
 import com.marklogic.client.query.DeleteQueryDefinition;
 import com.marklogic.client.query.QueryManager;
-import org.apache.http.client.utils.DateUtils;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.Date;
 
 public class JsonCrudUtil {
 

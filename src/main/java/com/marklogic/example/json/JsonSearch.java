@@ -2,15 +2,12 @@ package com.marklogic.example.json;
 
 import com.google.gson.*;
 import com.marklogic.client.*;
-import com.marklogic.client.eval.ServerEvaluationCall;
 import com.marklogic.client.io.Format;
 import com.marklogic.client.io.StringHandle;
 import com.marklogic.client.query.QueryManager;
 import com.marklogic.client.query.RawQueryByExampleDefinition;
 import com.marklogic.client.query.StringQueryDefinition;
-import com.marklogic.client.query.StructuredQueryBuilder;
 import com.marklogic.example.utils.QueryOptionsUtil;
-import org.apache.commons.codec.binary.StringUtils;
 
 public class JsonSearch {
 
@@ -18,12 +15,26 @@ public class JsonSearch {
         QueryManager queryMgr = client.newQueryManager();
 
         // create a searchByExample definition
+        /*
         StringHandle handle = new StringHandle(
                // "{ \"$query\": { \"firstName\": \"Bevis\" } }"
                 "{ \"$query\": { \"name\": \"john\", \"age\": 11 } }"
         ).withFormat(Format.JSON);
+        */
 
-        RawQueryByExampleDefinition query = queryMgr.newRawQueryByExampleDefinition(handle);
+        StringHandle handle = new StringHandle(
+                "{\n" +
+                        "  \"$query\" : {\n" +
+                        "    \"$or\": [\n" +
+                        "      {\"$word\": \"france\" },\n" +
+                        "      {\"$word\": \"canada\" }\n" +
+                        "    ]\n" +
+                        "  }\n" +
+                        "}"
+        ).withFormat(Format.JSON);
+
+        //RawQueryByExampleDefinition query = queryMgr.newRawQueryByExampleDefinition(handle);
+        RawQueryByExampleDefinition query = queryMgr.newRawQueryByExampleDefinition(handle, QueryOptionsUtil.OPTIONS_NAME_ALL);
 
         // create a handle for the searchByExample results
         StringHandle resultsHandle = new StringHandle().withFormat(Format.JSON);
@@ -38,11 +49,11 @@ public class JsonSearch {
         client.release();
     }
 
-    public void structuredQuery(DatabaseClient client, String queryParam, long pageLength) {
+    public void stringQuery(DatabaseClient client, String queryParam, long pageLength) {
 
-        String[] collections = {"structuredQuery-samples-marklogic"};
+        String[] collections = {"stringQuery-samples-marklogic"};
 
-        structuredQuery(client
+        stringQuery(client
                 , queryParam
                 , QueryOptionsUtil.OPTIONS_NAME_ALL
                 , collections
@@ -51,10 +62,10 @@ public class JsonSearch {
                 , 1);
     }
 
-    public void structuredQuery(DatabaseClient client, String queryParam, long pageLength, long start) {
-        String[] collections = {"structuredQuery-samples-marklogic"};
+    public void stringQuery(DatabaseClient client, String queryParam, long pageLength, long start) {
+        String[] collections = {"stringQuery-samples-marklogic"};
 
-        structuredQuery(client
+        stringQuery(client
                 , queryParam
                 , QueryOptionsUtil.OPTIONS_NAME_ALL
                 , collections
@@ -63,7 +74,7 @@ public class JsonSearch {
                 , start);
     }
 
-    public void structuredQuery(DatabaseClient client
+    public void stringQuery(DatabaseClient client
             , String queryParam
             , String optionName
             , String[] collections
@@ -75,7 +86,7 @@ public class JsonSearch {
         QueryManager queryMgr = client.newQueryManager();
         queryMgr.setPageLength(pageLength);
 
-        // create a structuredQuery definition
+        // create a stringQuery definition
         StringQueryDefinition querydef = queryMgr.newStringDefinition(optionName);
         querydef.setCriteria(queryParam);
 
@@ -87,10 +98,10 @@ public class JsonSearch {
             querydef.setDirectory(directory);
         }
 
-        // create a raw content handle for the structuredQuery results
+        // create a raw content handle for the stringQuery results
         StringHandle resultsHandle = new StringHandle().withFormat(Format.JSON);
 
-        // run the structuredQuery
+        // run the stringQuery
         queryMgr.search(querydef, resultsHandle, start);
 
         System.out.println("Matched documents with '"+querydef.getCriteria()+"'\n");

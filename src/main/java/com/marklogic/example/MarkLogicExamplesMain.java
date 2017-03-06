@@ -36,31 +36,33 @@ public class MarkLogicExamplesMain {
 			//jsonCrud.verify(main.getDBClient());
 			//jsonCrud.updateDocJsonpath(main.getDBClient());
 			//jsonCrud.verify(main.getDBClient());
-			jsonCrud.deleteDocument(main.getDBClient());
-			jsonCrud.removeArrayNodeJsonpath(main.getDBClient());
+			//jsonCrud.deleteDocument(main.getDBClient());
+			//jsonCrud.removeArrayNodeJsonpath(main.getDBClient());
 			//jsonCrud.verify(main.getDBClient());
 
 			JsonSearch jsonSearch = new JsonSearch();
 			jsonCrud.loadDocs(main.getDBClient());
-			//jsonSearch.searchByExample(main.getDBClient());
+			jsonSearch.searchByExample(main.getDBClient());
 
+			/*
 			QueryOptionsUtil.configureOptions(main.getDBClient(), QueryOptionsUtil.OPTIONS_NAME_ALL);
 			QueryOptionsUtil.configureOptions(main.getDBClient(), QueryOptionsUtil.OPTIONS_NAME_TAGS);
-			jsonSearch.structuredQuery(main.getDBClient(), "Falkland Islands firstName:\"Sarah\" sort:firstName-asc", 10);
-			jsonSearch.structuredQuery(main.getDBClient(), "canada", 5);
-			jsonSearch.structuredQuery(main.getDBClient(), "sort:\"dob-asc\"", 10);
-			jsonSearch.structuredQuery(main.getDBClient(), "sort:\"firstName-asc\"", 5, 6);
+			jsonSearch.stringQuery(main.getDBClient(), "Falkland Islands firstName:\"Sarah\" sort:firstName-asc", 10);
+			jsonSearch.stringQuery(main.getDBClient(), "canada", 5);
+			jsonSearch.stringQuery(main.getDBClient(), "sort:\"dob-asc\"", 10);
+			jsonSearch.stringQuery(main.getDBClient(), "sort:\"firstName-asc\"", 5, 6);
 
-			jsonSearch.structuredQuery(main.getDBClient()
+			jsonSearch.stringQuery(main.getDBClient()
 				, "tagParent:(tag_class:yyy1 AND tag_name:xxx1)"
 				, QueryOptionsUtil.OPTIONS_NAME_TAGS
 			    , null
 				, null
 				, 10
 				, 1);
+				*/
 
 			//enable this to cleanup
-			JsonCrudUtil.deleteCollection(main.getDBClient(), "structuredQuery-samples-marklogic");
+			JsonCrudUtil.deleteCollection(main.getDBClient(), "stringQuery-samples-marklogic");
 
 			//GraphSPARQLExample gse = new GraphSPARQLExample();
 			//gse.loadTriplesFromFile(main.getDBClient());
